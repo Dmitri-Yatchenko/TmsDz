@@ -1,5 +1,7 @@
 package com.tms.lesson4;
 
+import java.util.Arrays;
+
 public class sumMinimumMaximum {
     public static void main(String[] args) {
 
@@ -26,7 +28,7 @@ public class sumMinimumMaximum {
                 min = number;
             }
         }
-
+        System.out.println("Массив чисел: " + Arrays.toString(mas));
         System.out.println("Максимальное число: " + max);
         System.out.println("Минимальное число: " + min);
         System.out.println("Сумма максимального и минимального числа равна: " + (min + max));
