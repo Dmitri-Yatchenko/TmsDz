@@ -7,12 +7,12 @@ public class fibonacciNumbers {
 
         int[] mas = new int[10];
 
-        for (int i = 0; i < mas.length; i++){
+        for (int i = 0; i < mas.length; i++) {
 
-            if (i<2){
+            if (i < 2) {
                 mas[i] = i;
-            }else {
-                mas[i] = mas[i-1] + mas[i-2];
+            } else {
+                mas[i] = mas[i - 1] + mas[i - 2];
             }
 
         }
