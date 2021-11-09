@@ -2,7 +2,7 @@ package com.tms.lesson4;
 
 import java.util.Arrays;
 
-public class sumMinimumMaximum {
+public class SumMinimumMaximum {
     public static void main(String[] args) {
 
         int[] mas = new int[]{1, 3, 6, 5, -9, 100};
@@ -15,9 +15,6 @@ public class sumMinimumMaximum {
             if (max < number) {
                 max = number;
             }
-        }
-
-        for (int number : mas) {
 
             if (b) {
                 min = number;
@@ -28,6 +25,7 @@ public class sumMinimumMaximum {
                 min = number;
             }
         }
+
         System.out.println("Массив чисел: " + Arrays.toString(mas));
         System.out.println("Максимальное число: " + max);
         System.out.println("Минимальное число: " + min);

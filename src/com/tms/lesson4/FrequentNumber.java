@@ -2,7 +2,7 @@ package com.tms.lesson4;
 
 import java.util.Arrays;
 
-public class frequentNumber {
+public class FrequentNumber {
 
     public static void main(String[] args) {
 

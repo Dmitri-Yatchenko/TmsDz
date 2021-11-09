@@ -2,7 +2,7 @@ package com.tms.lesson4;
 
 import java.util.Arrays;
 
-public class fibonacciNumbers {
+public class FibonacciNumbers {
     public static void main(String[] args) {
 
         int[] mas = new int[10];
