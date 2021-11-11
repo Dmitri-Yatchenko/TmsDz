@@ -15,6 +15,7 @@ public class WorkingWithArrays {
         }
     }
 
+    @Deprecated
     public static int maximumArrayElement(int[] arr){
         int max = 0;
 
