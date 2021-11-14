@@ -10,7 +10,7 @@ public class FibonacciNumbers {
         for (int i = 0; i < mas.length; i++) {
 
             if (i < 2) {
-                mas[i] = i;
+                mas[i] = 1;
             } else {
                 mas[i] = mas[i - 1] + mas[i - 2];
             }
