@@ -4,13 +4,12 @@ public abstract class Employee extends Person{
 
     public Positions position;
     public int experience;
-    public int tariffRate;
+    public int tariffRate = 500;
 
-    public Employee(String name, String surname, Positions position, int experience, int tariffRate) {
+    public Employee(String name, String surname, int experience) {
         super(name, surname);
-        this.position = position;
         this.experience = experience;
-        this.tariffRate = tariffRate;
+
     }
 
     public abstract void establishAPosition(Positions position);

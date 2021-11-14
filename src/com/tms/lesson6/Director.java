@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public class Director extends Employee{
 
-    Person[] employees = new Person[0];
+    Employee[] employees = new Employee[0];
+    public Positions position;
 
-    public Director(String name, String surname, Positions position, int experience, int tariffRate) {
-        super(name, surname, position, experience, tariffRate);
+    public Director(String name, String surname, int experience, int tariffRate) {
+        super(name, surname, experience);
+        this.position = Positions.DIRECTOR;
     }
 
     @Override
@@ -15,11 +17,10 @@ public class Director extends Employee{
         this.position = position;
     }
 
-    public void addWorker(Person person) {
-        Person[] employees1 = employees;
-        employees = Arrays.copyOf(employees1, employees1.length + 1);
+    public void addWorker(Employee emp) {
+        employees = Arrays.copyOf(employees, employees.length + 1);
         int i = employees.length - 1;
-        employees[i] = person;
+        employees[i] = emp;
     }
 
     @Override
