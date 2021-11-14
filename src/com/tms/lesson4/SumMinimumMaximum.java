@@ -12,13 +12,15 @@ public class SumMinimumMaximum {
         boolean b = true;
 
         for (int number : mas) {
-            if (max < number) {
-                max = number;
-            }
 
             if (b) {
-                min = number;
+               min = number;
+               max = number;
                 b = false;
+            }
+
+            if (max < number) {
+                max = number;
             }
 
             if (min > number) {
