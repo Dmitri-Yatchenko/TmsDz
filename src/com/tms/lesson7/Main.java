@@ -28,6 +28,5 @@ public class Main {
         search1.SearchByName((Director) director1, "Борис");
         Search search2 = new MultilevelSearch();
         search2.SearchByName((Director) director1, "Витя");
-
     }
 }
