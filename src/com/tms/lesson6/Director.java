@@ -5,11 +5,9 @@ import java.util.Arrays;
 public class Director extends Employee{
 
     Employee[] employees = new Employee[0];
-    public Positions position;
 
     public Director(String name, String surname, int experience, int tariffRate) {
-        super(name, surname, experience);
-        this.position = Positions.DIRECTOR;
+        super(name, surname, experience, Positions.DIRECTOR);
     }
 
     @Override

@@ -6,9 +6,10 @@ public abstract class Employee extends Person{
     public int experience;
     public int tariffRate = 500;
 
-    public Employee(String name, String surname, int experience) {
+    public Employee(String name, String surname, int experience, Positions position) {
         super(name, surname);
         this.experience = experience;
+        this.position = position;
 
     }
 

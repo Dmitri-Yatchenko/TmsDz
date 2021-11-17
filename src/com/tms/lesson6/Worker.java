@@ -2,8 +2,7 @@ package com.tms.lesson6;
 
 public class Worker extends Employee{
     public Worker(String name, String surname, int experience, int tariffRate) {
-        super(name, surname, experience);
-        this.position = Positions.WORKER;
+        super(name, surname, experience, Positions.WORKER);
     }
 
     @Override
