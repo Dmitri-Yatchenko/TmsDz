@@ -7,17 +7,11 @@ public class SumMinimumMaximum {
 
         int[] mas = new int[]{1, 3, 6, 5, -9, 100};
 
-        int min = 0;
-        int max = 0;
-        boolean b = true;
+        int min = mas[0];
+        int max = mas[0];
 
         for (int number : mas) {
 
-            if (b) {
-               min = number;
-               max = number;
-                b = false;
-            }
 
             if (max < number) {
                 max = number;
