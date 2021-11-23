@@ -7,7 +7,7 @@ public class UserService implements Service{
     }
 
     @Override
-    public String returnElement(String[] arr) {
-        return null;
+    public void returnElement(String[] arr) {
+
     }
 }
