@@ -23,7 +23,7 @@ public class Main {
                 try {
                     service.addElement(arr, s);
                 } catch (ArrayOverflowException ex) {
-                    System.out.println("Ошибка переполнения памяти!");
+                    System.out.println("Ошибка переполнения памяти, максимальное количество элементов 5!");
                 }
             }
         }

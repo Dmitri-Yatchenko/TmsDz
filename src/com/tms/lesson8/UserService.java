@@ -29,6 +29,8 @@ public class UserService implements Service {
         for (int i = 4; i >= 0; i--) {
             if (arr[i] != null) {
                 System.out.println(arr[i]);
+                recordReceived = true;
+                arr[i] = null;
                 break;
             }
         }
