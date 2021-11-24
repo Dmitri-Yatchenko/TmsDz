@@ -2,8 +2,8 @@ package com.tms.lesson8;
 
 public interface Service {
 
-    public void addElement(String[] arr, String element) throws ArrayOverflowException;
+    public void addElement(Database db, String element) throws ArrayOverflowException;
 
-    public void returnElement(String[] arr) throws GettingAnEmptyEntryException;
+    public void returnElement(Database db) throws GettingAnEmptyEntryException;
 
 }

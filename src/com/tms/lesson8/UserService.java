@@ -2,11 +2,11 @@ package com.tms.lesson8;
 
 public class UserService implements Service {
     @Override
-    public void addElement(String[] arr, String element) {
+    public void addElement(Database db, String element) {
 
 
         boolean addedElement = false;
-
+        String[] arr = db.arr;
         for (int i = 0; i < 5; i++) {
             if (arr[i] == null) {
                 arr[i] = element;
@@ -22,10 +22,10 @@ public class UserService implements Service {
     }
 
     @Override
-    public void returnElement(String[] arr) {
+    public void returnElement(Database db) {
 
         boolean recordReceived = false;
-
+        String[] arr = db.arr;
         for (int i = 4; i >= 0; i--) {
             if (arr[i] != null) {
                 System.out.println(arr[i]);

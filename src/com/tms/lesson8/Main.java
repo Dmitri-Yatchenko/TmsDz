@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String[] arr = new String[5];
+        Database db = new Database();
         Service service = new UserService();
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -15,13 +15,13 @@ public class Main {
                 break;
             } else if (s.equals("get")) {
                 try {
-                    service.returnElement(arr);
+                    service.returnElement(db);
                 } catch (GettingAnEmptyEntryException ex) {
                     System.out.println("Ошибка получения пустой записи из памяти!");
                 }
             } else {
                 try {
-                    service.addElement(arr, s);
+                    service.addElement(db, s);
                 } catch (ArrayOverflowException ex) {
                     System.out.println("Ошибка переполнения памяти, максимальное количество элементов 5!");
                 }
