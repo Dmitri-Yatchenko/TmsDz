@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface Service {
 
-    public User SearchByName(List<User> list, String name);
+    public List<User> SearchByName(List<User> list, String name);
 
     public List<User> SearchByGender(List<User> list, Gender gender);
 

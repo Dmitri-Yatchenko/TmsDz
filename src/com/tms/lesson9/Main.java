@@ -34,17 +34,44 @@ public class Main {
         userSet2.add(user3);
         userSet2.add(user4);
 
-        Map<String, Integer> map = new HashMap<>();
-        map.put("1", 4);
-        map.put("2", 7);
-        map.put("3", 4);
-        map.put("4", 7);
-        map.put("5", 5);
-        map.put("6", 6);
-        map.put("7", 7);
-        map.put("8", 1);
-        map.put("9", 7);
-        map.put("10", 10);
+        Service service = new UserService();
+
+        List<User> usersN1 = service.SearchByName(userList1, "Юля");
+        System.out.println(usersN1.toString());
+        List<User> usersG1 = service.SearchByGender(userList1, Gender.MALE);
+        System.out.println(usersG1.toString());
+
+        List<User> usersN2 = service.SearchByName(userList2, "Юля");
+        System.out.println(usersN2.toString());
+        List<User> usersG2 = service.SearchByGender(userList2, Gender.MALE);
+        System.out.println(usersG2.toString());
+
+        System.out.println(service.SortAscending(userList2).toString());
+
+//        List<User> usersN3 = service.SearchByName(userSet1, "Юля");
+//        System.out.println(usersN3.toString());
+//        List<User> usersG3 = service.SearchByGender(userSet1, Gender.MALE);
+//        System.out.println(usersG3.toString());
+//
+//        List<User> usersN4 = service.SearchByName(userSet2, "Юля");
+//        System.out.println(usersN4.toString());
+//        List<User> usersG4 = service.SearchByGender(userSet2, Gender.MALE);
+//        System.out.println(usersG4.toString());
+
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(4);
+        list.add(7);
+        list.add(4);
+        list.add(7);
+        list.add(5);
+        list.add(6);
+        list.add(7);
+        list.add(1);
+        list.add(7);
+        list.add(10);
+
+        ServiceNumber serviceNumber = new RepetitionSearchService();
+        serviceNumber.FindRepetitions(list);
 
     }
 }

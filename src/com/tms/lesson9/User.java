@@ -2,7 +2,7 @@ package com.tms.lesson9;
 
 import java.util.Objects;
 
-public class User implements Comparable{
+public class User implements Comparable {
 
     private String name;
     private int age;
@@ -42,9 +42,9 @@ public class User implements Comparable{
     @Override
     public int compareTo(Object o) {
 
-        User out = (User)o;
-        if ((age-out.age) != 0)
-            return age-out.age;
+        User out = (User) o;
+        if ((age - out.age) != 0)
+            return age - out.age;
         else {
             return name.compareTo(out.name);
         }
