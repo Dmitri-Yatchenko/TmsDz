@@ -4,10 +4,10 @@ import java.util.List;
 
 public interface Service {
 
-    public List<User> SearchByName(List<User> list, String name);
+    public List<User> searchByName(List<User> list, String name);
 
-    public List<User> SearchByGender(List<User> list, Gender gender);
+    public List<User> searchByGender(List<User> list, Gender gender);
 
-    public List<User> SortAscending(List<User> list);
+    public List<User> sortAscending(List<User> list);
 
 }

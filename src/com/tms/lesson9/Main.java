@@ -36,17 +36,17 @@ public class Main {
 
         Service service = new UserService();
 
-        List<User> usersN1 = service.SearchByName(userList1, "Юля");
+        List<User> usersN1 = service.searchByName(userList1, "Юля");
         System.out.println(usersN1.toString());
-        List<User> usersG1 = service.SearchByGender(userList1, Gender.MALE);
+        List<User> usersG1 = service.searchByGender(userList1, Gender.MALE);
         System.out.println(usersG1.toString());
 
-        List<User> usersN2 = service.SearchByName(userList2, "Юля");
+        List<User> usersN2 = service.searchByName(userList2, "Юля");
         System.out.println(usersN2.toString());
-        List<User> usersG2 = service.SearchByGender(userList2, Gender.MALE);
+        List<User> usersG2 = service.searchByGender(userList2, Gender.MALE);
         System.out.println(usersG2.toString());
 
-        System.out.println(service.SortAscending(userList2).toString());
+        System.out.println(service.sortAscending(userList2).toString());
 
 //        List<User> usersN3 = service.SearchByName(userSet1, "Юля");
 //        System.out.println(usersN3.toString());
@@ -71,7 +71,7 @@ public class Main {
         list.add(10);
 
         ServiceNumber serviceNumber = new RepetitionSearchService();
-        serviceNumber.FindRepetitions(list);
+        serviceNumber.findRepetitions(list);
 
     }
 }

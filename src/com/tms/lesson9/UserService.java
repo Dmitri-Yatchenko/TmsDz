@@ -8,7 +8,7 @@ import java.util.List;
 public class UserService implements Service {
 
     @Override
-    public List<User> SearchByName(List<User> list, String name) {
+    public List<User> searchByName(List<User> list, String name) {
         List<User> users = new ArrayList<>();
         for (User user : list) {
             if (user.getName().equals(name)) {
@@ -19,7 +19,7 @@ public class UserService implements Service {
     }
 
     @Override
-    public List<User> SearchByGender(List<User> list, Gender gender) {
+    public List<User> searchByGender(List<User> list, Gender gender) {
         List<User> users = new ArrayList<>();
         for (User user : list) {
             if (user.getGender().equals(gender)) {
@@ -30,7 +30,7 @@ public class UserService implements Service {
     }
 
     @Override
-    public List<User> SortAscending(List<User> list) {
+    public List<User> sortAscending(List<User> list) {
 
         UserComparatorAge userComparatorAge = new UserComparatorAge();
         Collections.sort(list, userComparatorAge);
