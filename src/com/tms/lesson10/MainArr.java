@@ -4,6 +4,7 @@ package com.tms.lesson10;
 import java.util.Arrays;
 
 public class MainArr {
+
     public static void main(String[] args) {
 
         int[] arr = new int[7];
