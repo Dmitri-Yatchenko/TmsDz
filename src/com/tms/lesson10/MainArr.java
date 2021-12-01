@@ -33,8 +33,5 @@ public class MainArr {
         Arrays.stream(arr)
                 .skip(4)
                 .forEach(System.out::println);
-
-
-
     }
 }
