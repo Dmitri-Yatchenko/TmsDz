@@ -2,6 +2,8 @@ package com.tms.lesson10;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class MainFamily {
 
@@ -74,5 +76,11 @@ public class MainFamily {
         System.out.println(allChildren);
         System.out.println("---------------------------------------");
 
+
+        //Map, где ключ - имя родителя, а значение - количество детей
+        Map<String, Integer> collect1 = families.stream()
+                .collect(Collectors.toMap(Family::getName, family -> family.getChildren().size()));
+
+        collect1.forEach((key, value) -> System.out.println(key + " : " + value));
     }
 }
