@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class MainFamily {
 
     public static void main(String[] args) {
+
         Family family1 = new Family("family1", Arrays.asList(
                 new Child("child1", 10, Gender.MALE),
                 new Child("child2", 15, Gender.MALE),
