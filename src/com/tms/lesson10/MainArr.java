@@ -30,6 +30,12 @@ public class MainArr {
         System.out.println("Минимальное число: " + min);
         System.out.println("_________________________________");
 
+        int sum = Arrays.stream(arr)
+                .filter(val -> val % 2 == 0)
+                .sum();
+        System.out.println("Сумма четных чисел: " + sum);
+        System.out.println("_________________________________");
+
         System.out.println("Элементы массива начиная с 5:");
         Arrays.stream(arr)
                 .skip(4)
