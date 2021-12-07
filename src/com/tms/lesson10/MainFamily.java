@@ -63,7 +63,7 @@ public class MainFamily {
         System.out.println("---------------------------------------");
 
 
-        //Вывести имена датей большими буквами
+        //Вывести имена дeтей большими буквами
         families.stream()
                 .flatMap(family -> family.getChildren().stream())
                 .forEach(x -> System.out.println(x.getName().toUpperCase()));

@@ -7,14 +7,7 @@ public class MainArr {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[7];
-        arr[0] = -7;
-        arr[1] = 22;
-        arr[2] = 19;
-        arr[3] = 18;
-        arr[4] = 20;
-        arr[5] = 27;
-        arr[6] = -9;
+        int[] arr = new int[]{-7, 22, 19, 18, 20, 27, -9};
 
         System.out.println("Массив: " + Arrays.toString(arr));
         System.out.println("_________________________________");
