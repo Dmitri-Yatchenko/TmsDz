@@ -1,7 +1,6 @@
 package com.tms.lesson11;
 
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class SerializableServis {
@@ -10,19 +9,10 @@ public class SerializableServis {
 
         User user = new User("Dmitri", 30, Gender.MALE);
 
-        ObjectOutputStream objectOutputStream = null;
-        try {
-            FileOutputStream outputStream = new FileOutputStream("User.txt");
-            objectOutputStream = new ObjectOutputStream(outputStream);
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("User.txt"))){
             objectOutputStream.writeObject(user);
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            try {
-                objectOutputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
