@@ -3,7 +3,7 @@ package com.tms.lesson11;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
-public class SerializableServis {
+public class SerializableService {
 
     public static void main(String[] args) {
 

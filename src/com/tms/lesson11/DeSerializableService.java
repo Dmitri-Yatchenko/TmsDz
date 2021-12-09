@@ -3,7 +3,7 @@ package com.tms.lesson11;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
-public class DeSerializableServis {
+public class DeSerializableService {
 
     public static void main(String[] args) {
 
