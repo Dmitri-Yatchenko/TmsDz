@@ -10,10 +10,10 @@ public class FillingTheCollection implements Runnable {
         this.list = list;
     }
 
-    public void addObjects() {
+    private synchronized void addObjects() {
 
         while (true) {
-            if (list.size() > 9) {
+            if (list.size() > 10) {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

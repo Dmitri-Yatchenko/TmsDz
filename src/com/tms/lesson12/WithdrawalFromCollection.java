@@ -10,7 +10,7 @@ public class WithdrawalFromCollection implements Runnable {
         this.list = list;
     }
 
-    public void retrievingCollectionData() {
+    private synchronized void retrievingCollectionData() {
 
         while (true) {
             if (list.size() > 0) {
