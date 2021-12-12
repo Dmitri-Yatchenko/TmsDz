@@ -14,6 +14,11 @@ public class WithdrawalFromCollection implements Runnable {
 
         while (true) {
             if (list.size() > 0) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 del();
                 System.out.println("Текущий список: " + list.toString());
                 try {
@@ -23,7 +28,7 @@ public class WithdrawalFromCollection implements Runnable {
                 }
             } else {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

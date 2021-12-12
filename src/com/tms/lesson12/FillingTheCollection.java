@@ -15,7 +15,7 @@ public class FillingTheCollection implements Runnable {
         while (true) {
             if (list.size() > 10) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
