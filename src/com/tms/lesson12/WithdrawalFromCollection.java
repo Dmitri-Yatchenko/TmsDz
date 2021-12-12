@@ -10,17 +10,12 @@ public class WithdrawalFromCollection implements Runnable {
         this.list = list;
     }
 
-    private synchronized void retrievingCollectionData() {
+    private void retrievingCollectionData() {
 
         while (true) {
             if (list.size() > 0) {
-
-                int i = list.size() - 1;
-                int element = list.get(i);
-                list.remove(i);
-                System.out.println("Изъят элемент: " + element);
+                del();
                 System.out.println("Текущий список: " + list.toString());
-
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -34,6 +29,13 @@ public class WithdrawalFromCollection implements Runnable {
                 }
             }
         }
+    }
+
+    private synchronized void del(){
+        int i = list.size() - 1;
+        int element = list.get(i);
+        list.remove(i);
+        System.out.println("Изъят элемент: " + element);
     }
 
     @Override

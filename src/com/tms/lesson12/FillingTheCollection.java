@@ -10,7 +10,7 @@ public class FillingTheCollection implements Runnable {
         this.list = list;
     }
 
-    private synchronized void addObjects() {
+    private void addObjects() {
 
         while (true) {
             if (list.size() > 10) {
@@ -20,12 +20,8 @@ public class FillingTheCollection implements Runnable {
                     e.printStackTrace();
                 }
             } else {
-
-                int i = (int) (Math.random() * 10);
-                list.add(i);
-                System.out.println("Вставлен элемент: " + i);
+                add();
                 System.out.println("Текущий список: " + list.toString());
-
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -33,6 +29,12 @@ public class FillingTheCollection implements Runnable {
                 }
             }
         }
+    }
+
+    private synchronized void add(){
+        int i = (int) (Math.random() * 10);
+        list.add(i);
+        System.out.println("Вставлен элемент: " + i);
     }
 
     @Override
