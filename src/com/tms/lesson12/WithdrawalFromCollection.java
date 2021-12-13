@@ -31,7 +31,7 @@ public class WithdrawalFromCollection implements Runnable {
         }
     }
 
-    private synchronized void del(){
+    private void del(){
         int i = list.size() - 1;
         int element = list.get(i);
         list.remove(i);

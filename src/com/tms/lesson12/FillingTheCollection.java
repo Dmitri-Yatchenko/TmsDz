@@ -31,7 +31,7 @@ public class FillingTheCollection implements Runnable {
         }
     }
 
-    private synchronized void add(){
+    private void add(){
         int i = (int) (Math.random() * 10);
         list.add(i);
         System.out.println("Вставлен элемент: " + i);
