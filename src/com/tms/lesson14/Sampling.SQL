@@ -3,44 +3,44 @@ SELECT * FROM humans WHERE dateOfBirth > '1994-01-01';
 SELECT count(*), sex FROM humans group by sex;
 
 SELECT
-    h1.name,
-    h3.name
-FROM humans h1
-         left join hobbiesofpeople h2 on h1.id = h2.human_id
-         left join hobby h3 on h2.hobby_id = h3.id;
+    humans.name,
+    hobby.name
+FROM humans humans
+         left join hobbiesofpeople hobbiesofpeople on humans.id = hobbiesofpeople.human_id
+         left join hobby hobby on hobbiesofpeople.hobby_id = hobby.id;
 
 SELECT
-    h1.name As name,
-    count(h3.name) AS col
-FROM humans h1
-         left join hobbiesofpeople h2 on h1.id = h2.human_id
-         left join hobby h3 on h2.hobby_id = h3.id
-GROUP BY h1.name
-HAVING  count(h3.name) > 1;
-
-
-SELECT
-    h1.name As name
-FROM humans h1
-         left join hobbiesofpeople h2 on h1.id = h2.human_id
-         left join hobby h3 on h2.hobby_id = h3.id
-         left join hobbyTypes h4 on h3.hobbyType_id = h4.id
-WHERE  h4.name = 'Passive'
-GROUP BY h1.name;
+    humans.name    As name,
+    count(hobby.name) AS col
+FROM humans humans
+         left join hobbiesofpeople hobbiesofpeople on humans.id = hobbiesofpeople.human_id
+         left join hobby hobby on hobbiesofpeople.hobby_id = hobby.id
+GROUP BY humans.name
+HAVING  count(hobby.name) > 1;
 
 
 SELECT
-    h2.name,
-    count(h2.name) AS col
-FROM hobby h1
-         left join hobbyTypes h2 on h1.hobbyType_id = h2.id
-GROUP BY h2.name;
+    humans.name As name
+FROM humans humans
+         left join hobbiesofpeople hobbiesofpeople on humans.id = hobbiesofpeople.human_id
+         left join hobby hobby on hobbiesofpeople.hobby_id = hobby.id
+         left join hobbyTypes hobbyTypes on hobby.hobbyType_id = hobbyTypes.id
+WHERE  hobbyTypes.name = 'Passive'
+GROUP BY humans.name;
 
 
 SELECT
-    h1.name,
-    h2.name
-FROM hobby h1
-         left join hobbyTypes h2 on h1.hobbyType_id = h2.id
+    hobbyTypes.name,
+    count(hobbyTypes.name) AS col
+FROM hobby hobby
+         left join hobbyTypes hobbyTypes on hobby.hobbyType_id = hobbyTypes.id
+GROUP BY hobbyTypes.name;
+
+
+SELECT
+    hobby.name,
+    hobbyTypes.name
+FROM hobby hobby
+         left join hobbyTypes hobbyTypes on hobby.hobbyType_id = hobbyTypes.id
 
 
