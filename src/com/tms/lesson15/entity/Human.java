@@ -4,14 +4,14 @@ import java.util.Date;
 import java.util.Objects;
 
 
-public class human {
+public class Human {
 
     private int id;
     private String name;
-    private int sex;
+    private boolean sex;
     private Date dateOfBirth;
 
-    public human(int id, String name, int sex, Date dateOfBirth) {
+    public Human(int id, String name, boolean sex, Date dateOfBirth) {
         this.id = id;
         this.name = name;
         this.sex = sex;
@@ -34,11 +34,11 @@ public class human {
         this.name = name;
     }
 
-    public int getSex() {
+    public boolean getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(boolean sex) {
         this.sex = sex;
     }
 
@@ -54,7 +54,7 @@ public class human {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        human humans = (human) o;
+        Human humans = (Human) o;
         return id == humans.id && sex == humans.sex && Objects.equals(name, humans.name) && Objects.equals(dateOfBirth, humans.dateOfBirth);
     }
 
