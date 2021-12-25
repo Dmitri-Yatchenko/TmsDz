@@ -1,4 +1,4 @@
-package com.tms.lesson15;
+package com.tms.lesson15.entity;
 
 public enum Gender {
     MALE,

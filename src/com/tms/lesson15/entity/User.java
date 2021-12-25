@@ -1,4 +1,4 @@
-package com.tms.lesson15;
+package com.tms.lesson15.entity;
 
 import com.tms.lesson11.Gender;
 
@@ -7,11 +7,13 @@ import java.util.Objects;
 
 public class User implements Serializable {
 
+    private int id;
     private String name;
     private int age;
     private Gender gender;
 
-    public User(String name, int age, Gender gender) {
+    public User(int id, String name, int age, Gender gender) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.gender = gender;
