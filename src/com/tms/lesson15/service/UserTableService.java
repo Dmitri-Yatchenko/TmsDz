@@ -8,7 +8,6 @@ import java.util.List;
 
 public class UserTableService implements TableService<Human> {
 
-
     private Connection connection;
 
     public UserTableService(Connection connection) {
