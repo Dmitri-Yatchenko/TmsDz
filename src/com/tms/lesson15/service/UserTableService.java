@@ -1,7 +1,6 @@
 package com.tms.lesson15.service;
 
 import com.tms.lesson15.entity.Human;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;

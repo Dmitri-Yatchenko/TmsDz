@@ -5,7 +5,6 @@ import com.tms.lesson15.config.JDBCConfiguration;
 import com.tms.lesson15.entity.Human;
 import com.tms.lesson15.service.TableService;
 import com.tms.lesson15.service.UserTableService;
-
 import java.sql.SQLException;
 import java.util.List;
 
