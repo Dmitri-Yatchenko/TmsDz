@@ -35,7 +35,7 @@ public class Main {
                 e.printStackTrace();
             }
             try {
-                System.out.println("Создан объект: " + resultSet.getInt(1)
+                System.out.println("Получены данные: " + resultSet.getInt(1)
                             + ", "
                             + resultSet.getString(2)
                             + ", "
