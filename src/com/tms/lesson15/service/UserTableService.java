@@ -79,7 +79,7 @@ public class UserTableService implements TableService<Human> {
     }
 
     @Override
-    public List<Human> getObjects() {
+    public List<Human> getListHuman() {
 
         List<Human> humans = new ArrayList<>();
         try {
