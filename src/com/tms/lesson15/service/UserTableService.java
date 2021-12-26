@@ -18,9 +18,8 @@ public class UserTableService implements TableService<Human> {
     @Override
     public void сreateTable() {
 
-        Statement statement = null;
         try {
-            statement = connection.createStatement();
+            Statement statement = connection.createStatement();
             statement.executeUpdate("CREATE TABLE humans( " +
                     "id SERIAL PRIMARY KEY, " +
                     " name CHARACTER VARYING(30), " +
@@ -35,9 +34,8 @@ public class UserTableService implements TableService<Human> {
     @Override
     public void fillTable() {
 
-        Statement statement = null;
         try {
-            statement = connection.createStatement();
+            Statement statement = connection.createStatement();
             statement.executeUpdate("INSERT INTO humans (name, sex, dateofbirth) VALUES" +
                     "('Human1', true, '1991-04-19')," +
                     "('Human2', false, '1992-07-15')," +
@@ -58,11 +56,9 @@ public class UserTableService implements TableService<Human> {
     @Override
     public String getById(int id) {
 
-        PreparedStatement statement = null;
         try {
-            statement = connection.prepareStatement("SELECT * FROM humans WHERE id = ?");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM humans WHERE id = ?");
             statement.setInt(1, id);
-
             ResultSet resultSet = statement.executeQuery();
             resultSet.next();
 
