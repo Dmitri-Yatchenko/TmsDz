@@ -57,22 +57,6 @@ public class UserTableService implements TableService<Human> {
     }
 
     @Override
-    public ResultSet getData() {
-
-        Statement statement = null;
-        ResultSet resultSet = null;
-        try {
-            statement = connection.createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM humans");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            return resultSet;
-        }
-    }
-
-
-    @Override
     public String getById(int id) {
 
         PreparedStatement statement = null;

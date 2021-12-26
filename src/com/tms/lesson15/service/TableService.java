@@ -9,8 +9,6 @@ public interface TableService<T>{
 
     void fillTable();
 
-    ResultSet getData();
-
     String getById(int id);
 
     List<T>getObjects();
